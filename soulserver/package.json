@@ -1,0 +1,18 @@
+{
+  "name": "soulserver",
+  "version": "0.0.1",
+  "main": "server.ts",
+  "scripts": {
+    "start": "nodemon ./server.ts"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.5.5",
+    "nodemon": "^3.1.4",
+    "typescript": "^5.6.2"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.45.4",
+    "express": "^4.21.0"
+  }
+}
