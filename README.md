@@ -90,6 +90,9 @@ For class view
 
 ## Stuff that works for now
 ### Backend stuff
-- fatebound stuff
+- fatebound
+- boss
+- location
+- weapon
 
 That's it, that is what it works lmao

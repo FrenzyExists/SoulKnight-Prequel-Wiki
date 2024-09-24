@@ -1,5 +1,7 @@
 import express, { Express } from 'express';
 import fateboundRouter from './routes/fatebounds';
+import weaponRouter from './routes/weapon';
+import locationRouter from './routes/location';
 const app: Express = express();
 const port = process.env.PORT || 3001;
 
@@ -180,6 +182,9 @@ Content-Type: application/json
 });
 
 app.use('/fatebound', fateboundRouter);
+app.use('/weapon', weaponRouter)
+app.use('/location', locationRouter);
+app.use('/boss', locationRouter);
 
 app.listen(port, () => {
   console.log(`Express is listening at http://localhost:${port}`);
