@@ -1,0 +1,139 @@
+.hero-section {
+  background-image: url('/wall.png'); /* Replace with your image URL */
+  height: 90vh;
+  background-size: cover;
+  background-position: bottom; /* Show the lower part of the image */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  flex-direction: column;
+  
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+
+
+
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  background-color: white;
+  font-family: Avenir, Helvetica, sans-serif;
+  color: black;
+
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.hero-text {
+  font-size: 3rem;
+  text-align: center;
+}
+
+.header-container {
+  max-height: 10vh;
+  height: 10vh;
+  background: #cee6f9;
+  color: color(srgb 0.3531 0.414 0.3868);
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  align-content: center;
+}
+
+.header-left {
+  float: left;
+}
+
+.header-left h1 {
+  float: right;
+  font-size: 45px;
+  
+}
+
+.header-right {
+  float: right;
+  
+  padding-right:10px;
+}
+
+.homeBtn {
+background-color: white;
+border: solid;
+border-width: 3px;
+border-color: rgb(3, 7, 89);
+box-sizing: border-box;
+color:  rgb(3, 7, 89);
+cursor: pointer;
+text-align: center;
+text-transform: uppercase;
+touch-action: manipulation;
+padding: 0.4rem;
+}
+
+.homeBtnb {
+  margin-right:1rem;;
+}
+
+body {
+  color: #161418;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+section {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  /* border-radius: .7rem; */
+  border: 1px solid #ffffff22;
+  overflow: hidden;
+  padding: 0.5rem;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+.cardImg {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  /* border-radius: 4px; */
+}
+
+
+.card .cardMain {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  padding: 1rem;
+}
+
+.card hr {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #88888855;
+  margin-top: 0;
+}
+
+.cardMain {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

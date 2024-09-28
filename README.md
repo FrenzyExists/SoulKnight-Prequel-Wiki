@@ -1,98 +1,58 @@
-# Soul Knight Prequel Wiki
+# WEB103 Project 1 - *Soul Knight Prequel Wiki*
 
-A small repo of weapons, classes, bosses for my fellow homies.
+Submitted by: **Angel Garcia**
 
-## 🚧 Planning Section 🚧
+About this web app: **An app for the mobile game Soul Knight prequel, barely a beta**
 
-Bosses
-- Boss Name
-- Boss Element
-- Boss information
-- Boss Equipment drop
-- Boss appearance
-- Boss defeat strats
+Time spent: **30** hours
 
-Equipment
-- Equipment Name
-- Equipment type
-- Equipment Ideal Class usage
-- Equipment rarity
-- Equipment obtainment method info
-- equipment abilities
-- equipment fatebound
-- equipment stats
-- equipment optimal stats
-- equipment atk
-- equipment element
-- equipment charge atk
-- equipment abil (2 or 3)
+## Required Features
 
-equipment can either be aurmour or weapons
+The following **required** functionality is completed:
 
-Abil
-- Abil Name
-- Abil description (general)
-- Abil desc 2
-- Abil desc 3
+<!-- Make sure to check off completed functionality below -->
+- [x] **The web app uses only HTML, CSS, and JavaScript without a frontend framework**
+- [x] **The web app displays a title**
+- [x] **The web app displays at least five list items, each with at least three attributes (such as title, text, and image url)**
+- [x] **The user can click on each item in the list to see a detailed view of it, including all database fields**
+  - [ ] *Note: When showing this feature in the video walkthrough, please show the unique URL for each detailed view. We will not be able to give points if we cannot see the implementation* 
+- [x] **The web app serves an appropriate 404 page when no matching route is defined**
+- [ ] **The web app is appropriately styled using Picocss**
 
-Classes
-- Class Name
-- Class skills
-- Class description
+The following **optional** features are implemented:
 
+- [x] The web app displays items in a unique format, such as cards rather than lists
 
-CRUD
+The following **additional** features are implemented:
 
-get all - pagination included, all infos
-get by id
-get by name
-get equip by class, rarity, element
+- [x] Uses Typescript
+- [x] Backend is done with supabase
 
-post any, does not require any user account
+## Video Walkthrough
 
-VIEWS
+**Note: please be sure to 
 
-Main view
-- Hero View with simple dumb description.
-- Wiki Links
-- Discord link for game
-- Game link
+Here's a walkthrough of implemented required features:
 
+<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
-Lookout view
-- This view can be for any data
-- You have a searchbar
-- Some items
-that's it
+<!-- Replace this with whatever GIF tool you used! -->
+GIF created with ...  Add GIF tool here
+<!-- Recommended tools:
+[Kap](https://getkap.co/) for macOS
+[ScreenToGif](https://www.screentogif.com/) for Windows
+[peek](https://github.com/phw/peek) for Linux. -->
 
-Searchbar has filter options
+## Notes
 
-Item view
-- Item info
-- Related info
+Typescript was more javascripty for some reason
 
-For boss view
-- shows boss info
-- weapon drop info
+## License
 
-For weapon view
-- weap info
-- ideal class to use for
-- element
-- drop info
+Copyright 2024 Pikachu
 
-For class view
-- class info
-- weapons drop
-- equip drop
-- ideal builds and their info
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
+> http://www.apache.org/licenses/LICENSE-2.0
 
-## Stuff that works for now
-### Backend stuff
-- fatebound
-- boss
-- location
-- weapon
-
-That's it, that is what it works lmao
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.

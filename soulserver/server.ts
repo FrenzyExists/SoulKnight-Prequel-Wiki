@@ -2,8 +2,13 @@ import express, { Express } from 'express';
 import fateboundRouter from './routes/fatebounds';
 import weaponRouter from './routes/weapon';
 import locationRouter from './routes/location';
+import cors from 'cors';
+
 const app: Express = express();
 const port = process.env.PORT || 3001;
+
+app.use(cors()); // Allow CORS for all routes
+
 
 app.get('/', (req, res) => {
   res.status(200).send(`

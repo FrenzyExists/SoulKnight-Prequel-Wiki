@@ -5,9 +5,16 @@ import { locationData } from "../.data/location";
 const locationRouter = express.Router();
 
 locationRouter.get("/", async (req, res) => {
+  const { page = 1, limit = 5 } = req.query;
+
+  const start = (Number(page) - 1) * Number(limit); 
+  const end = start + Number(limit) - 1; 
+
+
   const { data, error } = await supabase
     .from("Location")
-    .select("id, name, img");
+    .select("id, name, img")
+    .range(start, end);
 
   if (error) {
     return res.status(400).json({ error: error.message });
