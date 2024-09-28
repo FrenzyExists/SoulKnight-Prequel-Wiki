@@ -112,7 +112,7 @@ fateboundRouter.get("/postFatebound", async (req, res) => {
             .eq("name", existingFatebound.name)
             .select("name");
 
-        if (updateFatebound) {
+        if (updateFateboundError) {
           return res.status(500).json({ error: updateFateboundError });
         }
 
