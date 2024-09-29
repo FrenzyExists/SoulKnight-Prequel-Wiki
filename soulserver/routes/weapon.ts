@@ -5,7 +5,7 @@ import { weaponData } from "../.data/weapon";
 const weaponRouter = express.Router();
 
 weaponRouter.get("/", async (req, res) => {
-  const { page = 1, limit = 5 } = req.query;
+  const { page = 1, limit = 10 } = req.query;
 
   const start = (Number(page) - 1) * Number(limit); 
   const end = start + Number(limit) - 1; 
@@ -23,6 +23,27 @@ weaponRouter.get("/", async (req, res) => {
   }
   return res.json(data);
 });
+
+weaponRouter.get("/:id", async (req, res) => {
+  const { id } = req.params; // Retrieve the fateName from the route parameter
+
+  const { data, error } = await supabase
+    .from("Weapon")
+    .select("name, img, main_fatebound, secondary_fatebound, type, rarity")
+    .eq("id", id); // Query the database by name
+
+  if (error) {
+    return res.status(400).json({ error: error.message });
+  }
+
+  if (data.length === 0) {
+    return res.status(404).json({ message: "Weapon not found" });
+  }
+
+  res.json(data[0]); // Send the first matched result
+});
+
+
 
 weaponRouter.get("/postWeapon", async (req, res) => {
   try {

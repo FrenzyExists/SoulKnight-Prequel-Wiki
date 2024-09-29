@@ -1,45 +1,64 @@
-const renderFatebounds = async () => {
+const renderFatebound = async (id) => {
   const mainContent = document.getElementById("main-content");
 
-  const response = await fetch("http://localhost:3001/fatebound");
+  // Fetch fatebound data from the server
+  const response = await fetch(`http://localhost:3001/fatebound/${id}`);
   const data = await response.json();
 
+  // Clear the main content
+  mainContent.innerHTML = "";
+
   if (data && !data.error) {
-    const cardContainer = document.createElement("section");
-    data.forEach((d) => {
-    //   const card = document.createElement("div");
-    // card.classList.add('article-wrapper');
-    //   const cardImgContainer = document.createElement("figure");
-    //   const cardImg = document.createElement("img");
-    //   cardImg.src = d.img;
+    // Create a wrapper for fatebound info
+    const fateboundWrapper = document.createElement("div");
+    fateboundWrapper.classList.add("wrapper");
 
-    //   cardImgContainer.appendChild(cardImg);
+    // Title
+    const title = document.createElement("h1");
+    title.textContent = data.name;
+    title.classList.add("title");
 
-    //   const cardTitle = document.createElement("h2");
-    //   cardTitle.textContent = d.name;
+    // Image
+    const fateboundImg = document.createElement("img");
+    fateboundImg.src = data.img;
+    fateboundImg.alt = `${data.name} image`;
+    fateboundImg.classList.add("img");
 
-      const card = document.createElement("div");
-      card.classList.add("card");
+    // Description
+    const description = document.createElement("p");
+    description.textContent = data.description;
+    description.classList.add("description");
 
-      const cardImg = document.createElement("img");
-      cardImg.src = d.img;
-      cardImg.classList.add("cardImg");
+    const pe_2 = document.createElement("p");
+    const pe_3 = document.createElement("p");
 
-      const cardTitle = document.createElement("h2");
-      cardTitle.textContent = d.name;
+    pe_2.innerHTML = `<strong>2nd Fatebound Effect:</strong> <hr/> ${data["2_equip_pe"]}`;
+    pe_3.innerHTML = `<strong>3rd Fatebound Effect:</strong> <hr/> ${data["3_equip_pe"]}`;
 
-      card.appendChild(cardImg);
-      card.appendChild(cardTitle);
+    const peContainer = document.createElement("section");
+    peContainer.appendChild(pe_2);
+    peContainer.appendChild(pe_3);
 
-      cardContainer.appendChild(card);
-    });
-    mainContent?.appendChild(cardContainer);
+    const imgPEContainer = document.createElement("div");
+    imgPEContainer.appendChild(fateboundImg);
+    imgPEContainer.appendChild(peContainer);
+
+    imgPEContainer.classList.add("img-pe-container");
+
+    // Append all elements to the wrapper
+    fateboundWrapper.appendChild(title);
+    fateboundWrapper.appendChild(imgPEContainer);
+    fateboundWrapper.appendChild(description);
+    
+
+    // Append the wrapper to mainContent
+    mainContent.appendChild(fateboundWrapper);
   } else {
-    const nope = document.createElement("h2");
-    nope.textContent = "Not found 😔";
-    mainContent?.appendChild(nope);
+    const notFound = document.createElement("h2");
+    notFound.textContent = "Fatebound not found 😔";
+    notFound.classList.add("not-found");
+    mainContent.appendChild(notFound);
   }
-  return mainContent;
 };
 
-export default renderFatebounds;
+export default renderFatebound;

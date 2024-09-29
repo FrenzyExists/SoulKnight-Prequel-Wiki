@@ -6,8 +6,12 @@ const renderNotFound = async() => {
     const toHome = document.createElement('a')
     toHome.textContent = 'Come back Home'
     toHome.href = '/'
-    mainContent?.appendChild(notFoundT);
-    mainContent?.appendChild(toHome)
+    const notFound = document.createElement('div');
+    notFound.classList.add('not-found')
+    notFound?.appendChild(notFoundT);
+    notFound?.appendChild(toHome)
+    mainContent?.appendChild(notFound);
+
     return mainContent;
 }
 
